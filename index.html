@@ -42,12 +42,6 @@
             font-weight: 700;
             color: #3498db;
             text-decoration: none;
-            display: flex;
-            align-items: center;
-        }
-        .logo img {
-            height: 36px;
-            margin-right: 10px;
         }
         .nav-links {
             display: flex;
@@ -121,10 +115,11 @@
         .feature-card:hover {
             transform: translateY(-5px);
         }
-        .feature-card img {
-            width: 80px;
-            height: 80px;
+        .feature-card i {
+            font-size: 48px;
+            color: #3498db;
             margin-bottom: 20px;
+            display: block;
         }
         .feature-card h3 {
             font-size: 20px;
@@ -179,18 +174,16 @@
             }
         }
     </style>
+    <!-- Font Awesome 아이콘 사용 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
         <div class="container nav-container">
-            <a href="#" class="logo">
-                <img src="https://via.placeholder.com/36" alt="Logo">
-                ResearchTrace.AI
-            </a>
+            <a href="#" class="logo">ResearchTrace.AI</a>
             <ul class="nav-links">
                 <li><a href="#features">특징</a></li>
                 <li><a href="#app">애플리케이션</a></li>
-                <li><a href="#about">소개</a></li>
                 <li><a href="#contact">연락처</a></li>
             </ul>
         </div>
@@ -209,17 +202,17 @@
             <h2 class="section-title">주요 특징</h2>
             <div class="features-grid">
                 <div class="feature-card">
-                    <img src="https://via.placeholder.com/80" alt="Feature 1">
+                    <i class="fas fa-lightbulb"></i>
                     <h3>연구 과정 시각화</h3>
                     <p>논문 속에 감춰진 연구자의 사고 흐름과 의사결정 과정을 단계별로 재구성하여 시각화합니다.</p>
                 </div>
                 <div class="feature-card">
-                    <img src="https://via.placeholder.com/80" alt="Feature 2">
+                    <i class="fas fa-graduation-cap"></i>
                     <h3>교육적 가치</h3>
                     <p>학생들이 완성된 연구 결과물이 아닌, 연구 과정에서의 고민과 판단을 배울 수 있는 교육 자료를 제공합니다.</p>
                 </div>
                 <div class="feature-card">
-                    <img src="https://via.placeholder.com/80" alt="Feature 3">
+                    <i class="fas fa-brain"></i>
                     <h3>AI 기반 분석</h3>
                     <p>최신 AI 기술을 활용하여 논문의 내용을 심층 분석하고 단계별 연구노트를 자동으로 생성합니다.</p>
                 </div>
@@ -231,7 +224,8 @@
         <div class="container">
             <h2 class="section-title">ResearchTrace.AI 애플리케이션</h2>
             <div class="app-container">
-                <iframe class="app-iframe" src="https://script.google.com/macros/s/AKfycbx6HbWYt3XT_IQElVXQJN06gFtLt_wsB2OC9ihp3Wk_4LGWH5MukW6aD7FmXutMrTXR/exec" allowfullscreen></iframe>
+                <!-- 여기에 GAS 웹앱 URL을 넣으세요 -->
+                <iframe class="app-iframe" src="YOUR_GAS_WEB_APP_URL" allowfullscreen></iframe>
             </div>
         </div>
     </section>
@@ -239,8 +233,6 @@
     <footer id="contact">
         <div class="container">
             <div class="footer-links">
-                <a href="#">이용약관</a>
-                <a href="#">개인정보처리방침</a>
                 <a href="mailto:beanalogue@naver.com">문의하기</a>
             </div>
             <p>© 2025 ResearchTrace.AI - Developed by <strong>Stress & Resilience Lab</strong>, Dong-eui University</p>
