@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResearchTrace.AI - 연구 흐름 추적 시스템</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            min-height: 100vh;
+        }
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #3498db;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 36px;
+            margin-right: 10px;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        .nav-links li {
+            margin-left: 30px;
+        }
+        .nav-links a {
+            color: #555;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: #3498db;
+        }
+        .hero {
+            padding: 120px 0 60px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        .hero p {
+            font-size: 18px;
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: background-color 0.3s;
+            box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+        }
+        .cta-button:hover {
+            background-color: #2980b9;
+        }
+        .features {
+            padding: 60px 0;
+            background-color: #fff;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 32px;
+            color: #2c3e50;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .feature-card {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        .feature-card img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+        }
+        .feature-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        .feature-card p {
+            color: #666;
+            font-size: 16px;
+        }
+        .app-section {
+            padding: 60px 0;
+        }
+        .app-container {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+            height: 800px;
+        }
+        .app-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 30px 0;
+            text-align: center;
+        }
+        .footer-links {
+            margin-bottom: 20px;
+        }
+        .footer-links a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            .hero p {
+                font-size: 16px;
+            }
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="https://via.placeholder.com/36" alt="Logo">
+                ResearchTrace.AI
+            </a>
+            <ul class="nav-links">
+                <li><a href="#features">특징</a></li>
+                <li><a href="#app">애플리케이션</a></li>
+                <li><a href="#about">소개</a></li>
+                <li><a href="#contact">연락처</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>연구자의 사고 흐름을 추적하는<br>AI 연구노트 생성기</h1>
+            <p>ResearchTrace.AI는 논문의 저자가 연구를 진행하면서 겪었을 사고 과정과 의사결정을 AI를 통해 재구성하여 생생한 연구노트를 만들어내는 교육용 도구입니다.</p>
+            <a href="#app" class="cta-button">애플리케이션 시작하기</a>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">주요 특징</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <img src="https://via.placeholder.com/80" alt="Feature 1">
+                    <h3>연구 과정 시각화</h3>
+                    <p>논문 속에 감춰진 연구자의 사고 흐름과 의사결정 과정을 단계별로 재구성하여 시각화합니다.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="https://via.placeholder.com/80" alt="Feature 2">
+                    <h3>교육적 가치</h3>
+                    <p>학생들이 완성된 연구 결과물이 아닌, 연구 과정에서의 고민과 판단을 배울 수 있는 교육 자료를 제공합니다.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="https://via.placeholder.com/80" alt="Feature 3">
+                    <h3>AI 기반 분석</h3>
+                    <p>최신 AI 기술을 활용하여 논문의 내용을 심층 분석하고 단계별 연구노트를 자동으로 생성합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="app-section" id="app">
+        <div class="container">
+            <h2 class="section-title">ResearchTrace.AI 애플리케이션</h2>
+            <div class="app-container">
+                <iframe class="app-iframe" src="https://script.google.com/macros/s/AKfycbx6HbWYt3XT_IQElVXQJN06gFtLt_wsB2OC9ihp3Wk_4LGWH5MukW6aD7FmXutMrTXR/exec" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">이용약관</a>
+                <a href="#">개인정보처리방침</a>
+                <a href="mailto:beanalogue@naver.com">문의하기</a>
+            </div>
+            <p>© 2025 ResearchTrace.AI - Developed by <strong>Stress & Resilience Lab</strong>, Dong-eui University</p>
+            <p>Principal Investigator: Prof. Chan-Young Kwon | Contact: <a href="mailto:beanalogue@naver.com" style="color: #7fbbda;">beanalogue@naver.com</a></p>
+        </div>
+    </footer>
+</body>
+</html>
